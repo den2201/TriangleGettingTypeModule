@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TriangleInfo
 {
-    public interface ITriangle
+    public interface ITriangleSrvice <T>
     {
-        string GetTriangleType();
+        string ReturnTriangleTypeBySides(T x, T y, T z);
     }
 }

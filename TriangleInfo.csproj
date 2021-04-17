@@ -57,9 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Triangle.cs" />
-    <Compile Include="ITriangle.cs" />
+    <Compile Include="ITriangleService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TriangleService.cs" />
+    <Compile Include="TriangleGetTypeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

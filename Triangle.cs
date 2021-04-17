@@ -6,28 +6,46 @@ using System.Threading.Tasks;
 
 namespace TriangleInfo
 {
-    public class TriangleInfo<T> : ITriangle
+    public enum TriangleType
     {
-        public T LongSide { get;  set; }
+        RightTriangle,
+        AcuteAangleTriangle,
+        ObtuseTriangle,
+        UnknownType
+    }
+    internal class Triangle 
+    {
+         public double LongSide { get;  private set; }
 
-        public T SecondSide { get; set; }
+        public double SecondSide { get; private set; }
 
-        public T ThirdSide { get; set; }
+        public double ThirdSide { get; private set; }
 
-        private TriangleService<T> validationService;
+        
 
-        public TriangleInfo(T firstSide, T secondSide, T thirdSide)
+        internal Triangle(IEnumerable<int> sides)
         {
-           validationService = new TriangleService<T>(firstSide, secondSide, thirdSide);
-           validationService.CheckForValueType();
-            LongSide = firstSide;
-            SecondSide = secondSide;
-            ThirdSide = thirdSide;
+            var temp = sides.OrderByDescending(x => x).ToArray();
+            LongSide = temp.First();
+            SecondSide = temp[1];
+            ThirdSide = temp[2];
+        }
 
-        }
-        public string GetTriangleType()
+        private TriangleType CheckForTriangleType()
         {
-            throw new NotImplementedException();
+            if (Math.Pow(LongSide, 2) == Math.Pow(SecondSide, 2) + Math.Pow(ThirdSide, 2))
+                return TriangleType.RightTriangle;
+            else if (Math.Pow(LongSide, 2) < Math.Pow(SecondSide, 2) + Math.Pow(ThirdSide, 2))
+                return TriangleType.AcuteAangleTriangle;
+            else if (Math.Pow(LongSide, 2) > Math.Pow(SecondSide, 2) + Math.Pow(ThirdSide, 2))
+                return TriangleType.ObtuseTriangle;
+            else
+                return TriangleType.UnknownType;
         }
+        internal TriangleType GetTriangleType()
+        {
+            return CheckForTriangleType();
+        }
+
     }
 }
