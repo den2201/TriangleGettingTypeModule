@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28902.138
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleInfo", "TriangleInfo.csproj", "{B6D3AA74-90F9-488D-A62F-CFAEE3B4A830}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleTest", "..\TriangleTest\TriangleTest.csproj", "{ACD1B866-A4BF-4D04-889D-B93511D080F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetTypeTriangleTestProjects", "..\GetTypeTriangleTestProjects\GetTypeTriangleTestProjects.csproj", "{1DE52F07-FDF1-462B-AB61-458C864D6075}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetTypeTriangleTestProjects", "..\GetTypeTriangleTestProjects\GetTypeTriangleTestProjects.csproj", "{1DE52F07-FDF1-462B-AB61-458C864D6075}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TriangleServiceTests", "TriangleServiceTests", "{00EB187B-8DC6-407E-859B-32E460FA8643}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriangleTest", "TriangleTest\TriangleTest.csproj", "{AA6EB8C9-E2EB-4EE2-AAFC-3257734C8043}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,17 +21,20 @@ Global
 		{B6D3AA74-90F9-488D-A62F-CFAEE3B4A830}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6D3AA74-90F9-488D-A62F-CFAEE3B4A830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6D3AA74-90F9-488D-A62F-CFAEE3B4A830}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACD1B866-A4BF-4D04-889D-B93511D080F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACD1B866-A4BF-4D04-889D-B93511D080F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACD1B866-A4BF-4D04-889D-B93511D080F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACD1B866-A4BF-4D04-889D-B93511D080F9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1DE52F07-FDF1-462B-AB61-458C864D6075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1DE52F07-FDF1-462B-AB61-458C864D6075}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DE52F07-FDF1-462B-AB61-458C864D6075}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DE52F07-FDF1-462B-AB61-458C864D6075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA6EB8C9-E2EB-4EE2-AAFC-3257734C8043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA6EB8C9-E2EB-4EE2-AAFC-3257734C8043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA6EB8C9-E2EB-4EE2-AAFC-3257734C8043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA6EB8C9-E2EB-4EE2-AAFC-3257734C8043}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AA6EB8C9-E2EB-4EE2-AAFC-3257734C8043} = {00EB187B-8DC6-407E-859B-32E460FA8643}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7E6EC9A9-FEF7-4CDC-AF09-5F8CA9256BE9}
